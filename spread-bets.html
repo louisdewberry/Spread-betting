@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Spread Bets">
+<meta name="theme-color" content="#F4ECD9">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAALrUlEQVR4nO3d6W/b5h3A8YekSEqUqNPymfiK4yNnczRNm7RN12NLl2ZAO6wDhrbAsO3d/psBezNsb7Y3LbK1SIOi2dqiQZajWeq0SRwfiRMf8i1b98VrLzx4rqWHUiSR8vP493lXkRYfFF8wFI+HTGplDAFQCtvoAYDtC+IAWBAHwII4ABbEAbAgDoAFcQAsiANgQRwAC+IAWBAHwII4ABbEAbAgDoAFcQAsiANgQRwAC+IAWBAHwII4ABbEAbAgDoAFcQAsiANgQRwAC+IAWBAHwII4ABbEAbAgDoAFcQAsiANgQRwAC+IAWBAHwII4ABbEAbAgDoAFcQAsR6MHsL2oqWRhbVVNJdVMWsukdUUxVNXQNMQghuMYzsGJIueSOJfkkL28z897ZMQwjR61VXZ6HFo2k5l+kp2bzc7N5qPLeqHwVH/OsKwQCAlNYTEUdra0OlvbHW6PRUO1H7MzZzBWM+nEyN3kxGh2bhYZRh2/2eGRXW0d0u4u165OZ7iF6P3KjosjG5lZvX0z9XDM0HWrt8WJTqmrx93d6+7ew3t9Vm+u7nZQHNm52eWrX2WmnzRk62JTs6dvQO4bcLa2NWQAVdgRcWjZzNLXX8Tv3Wn0QBBCqOP8z+X+oUaPoiL0H5CmpybnLn2sZdJl12R5XmxqFsMtYriZ9/pYQWQFgRVFhuUMTTVUVc1mtHS6EFstRKPZ+VklHqtiPGK4pYq/agjK41i5dmXl+hXzQ05WFOW+Qe/gPqmrl2HNTvyIP/xPJZlIjj+I3x3OryxXOB5WEIRAsMKVG47eOAxj4fKl2N1hk1U40Rk6eTpw5FnGUc3/B172Bo89Fzz2XOrh2OJXlyvZkRC020AUxzH32SeJkbsmKwSeOd50+gzndNW+LU/fgNTVO//ZJ8nxB+ZrOltaa9+cbeg8fb709b9MymA4ru3s+ZbXztaljHUsz3e89U7ZI01nM8TRUMmxkdVb13FLWZ7v/MV7vv2H679hhmk7e573+U1WcbYQ8zsW0ReHkojPX/7UZIXWN865OnZbtHWWF5pffg23lOE4IRS2aNNWoC2OxS8/1/N53NLA0RPeoQOWDkDeO8j7AiUXiU3N5r+GthuSxlpWeupx6iH2nB7nksIvvmL5IBjGO7iv5BKyDjgQZXGsXPvaZGnw2edZXrBhGNLurpKfixBHo2TnI9nIDG4pK4qBI8/aMxLcUSdZv2MRTXHEvvvWZKm7q5fleXtGwrmkEmfVGIasM2CImjgMTUs9HDVZwdPTZ9tgEEIOyb3lEyEQtK3OeqEkjszMlJbLmazg7u61bTAIIYbjtnzibCbpDMc6auJ4YrKU5XmH7LVrLAghhIqu9BF3wIHoiWN22mSpQ7b7Liy9sPVcC3E/VRA1F97yy4smSx2SZNtI1nW++75h/OA2RCEQsnkMtaMhDiWZML9r/GnvKa+dEGqyeYtWoOGflbI3Umi5rC0DoQ0NcWjplPkKSiKuppL2DIYmVMRRdPRXLPVo3IaRUIaGOJBe/qmk6DfXDVW1YSw0oSEOxrH1jFMxJb5mflkOFKMhDs619Vx1SdFvrkW/uWb1YGhCQxxCoPTNNcWWr3wRuXhBy2QsHQ81aDjPIfiDLC/oSkUnM5JjI5mpx/97IqHoCgjYjJLHISOffJScMLsqW8zh9gSPn/QfOsqKYvm1dyRK4kiOjUQuXqjiD1me9w4e8B18xtW+q+6jIh0lcRi6PvmnPyiJeNXfIPiD3qH98sA+sam5jgMjGiVxoBp2HlsIgZDcPyj3DTrb2mv/NqLREwdCaO7SPxIP7tXr2xyyV+4bkPcOSru7iJ6gp2pUxWGo6vRHfzW5zbg6nMvl2dMv7x10d/VW98g1oaiKAyGkK0rk4w/TU5NWfDnL8549/d6hA+7uPTvhZzBtcSCEkGEsXfnC5HHZ2nEul2/fIf/hY0KQvFt4KkdjHAghhDIzUwuXPy2srVq6Fc+e/tDJ0662Dku30ijUxoEQMjRtbfhW9MZVq2/2kfcOhl96laApeypEcxzr9EJ+7c7ttds31XL3BNWC4bimF14OnXiBpt819MexztD11MRo7Ltv09OPrduK1Nndce5truiJJkLtlDg2KMlEcvR+Yux+bmHeiu/nff7Od98ncUraYjsujg1KIp6cGE1NjGYiM/Wd4Zr3+bt/9WsK9h87N44NWiadfDiWnBjNTD8xNK0u3ynt6uz85Qd1+aoGgjj+T8/nU5MTyYnR9OOHuqLU+G2tr7/pP3ysLgNrFIijBENVU5MTidH7qUfjVe9LHB55z29/T/SJVIjDjJbLJUbvxe7czq8sVfHn7efe9g7ur/uobANxVCQ9/Th64+rTvnFBHtjX8dY71ozIDjvoGmMt3J097s6e9PTjpS8vV74XyZo++7/90XD3uW3cnT3d7/0mdOKFCtdX06lK3tawbUEcT4fhuPBLr7b++FyF6yskP6MLcVTDf/CI/9DRStY0mTF3+4M4qhQ+/QorUP5MA8RRJU6SPL3lZygkbgbBzSCO6kldPWXXIfoKC8RRPfO3ZyCEGJZ1eGRbxmIJ8s5zGKqqZtIMwyCGQQzDMAxi2Tq+VqdyZWdS5/1Bsl6TsAV5ccTvf7/wz0ubPxHDLT0f/K4BQyl3oZ+41yRsQV7XucWtN+kI/kqnYKgvJREzX8G1y6q3/tiDwDiWtsbhcHsaMhIlXubRXMmyV0LZg7A4DF0vfolro+ZQKDMzruwl7jUJWxAWRyG6XDzvG8M25p4J8zm15b2Dto3EIoTFkVtcKP7Q0BowTWBuYd58blPvQOmXeRGEtDiKDjgQQlq2ARMUJx6YvdFYDLdY9w5K25AWR6k9RyFm7TOPxfRCPnb3jskKwaMn7BqLhYiKwzDySyWOAXOL84auF39unejNa8UvzdjA+/zefQftHI9FSIqjsLZacspAvVDIzs3aN4zVldXbN0xWCL/4I6LvK95AUhwlDzjWxb8ftmcMhqpGLv7dZKZsaVcn0TcVb0ZUHKUOONYlRu8VVlcsH4FhRC5eMDm9wQpC29mfWT4Mu5AVB3bPYej6/OefWnrkYajq7Mcfmr99ofX1N8teqiUISXGUPBrdkI3MLHx+sb5PvW4orK48+dufzctoev5F7xANx6EbiLkqq8RjZedgid//Xsvl2n5ynnPV7Qq+lstGb/57bfiW+Rs5/IeONp06U6+NbhPExJFbwh5wbJZ6ND75lz+GT53xHThc408GNZ2K3x2O3rpe9ibh4PGTzWder2Vb2xMxT7wtX/0qeuNq5es7PLJ36IDcP+RqbX+q2XaUeCz1aDwxNpKdmy37jxTDcc1n3ggcOV759xOEmD1HvrI9xwY1lVy9dX311nVWEJ2tbWIoLASCnOR2SG7G4WA4DumGpuT1fF4vFPR8Lh9dya8s5VeWKn+YQAgE23/6trOVvFdNV4iYPUc2MrM2/J/kxIN6TaFRC4bjQidOhZ47RfectcTEsU7LZRMj9xKj9+w8JboZw3G+/YdDJ0/TMbGTOcLi2KAkE8mxkdSj8Wxkxp4LK7zX59t/yH/oqEP22rC57YDUODbohUJ6ajIz/SQbmcktL9b9PAfvD3h693r6+t27u2maRrISxMexma4UcvNzueXF/PJSfmVJia1VMT2tQ3ILwZDY3Opq73C17aLpjOfToiqOYnqhoCRiaiqpZbNaNqPl84amGpqGdB2xLMM5GI5jBcHhkjhJ4iS34A+yQpmnUXYOyuMAtSDp2gqwGcQBsCAOgAVxACyIA2BBHAAL4gBYEAfAgjgAFsQBsCAOgAVxACyIA2BBHAAL4gBYEAfAgjgAFsQBsCAOgAVxACyIA2BBHAAL4gBYEAfAgjgAFsQBsCAOgAVxACyIA2BBHAAL4gBYEAfAgjgAFsQBsCAOgAVxACyIA2BBHAAL4gBYEAfAgjgAFsQBsCAOgAVxACyIA2BBHAAL4gBYEAfAgjgAFsQBsCAOgAVxACyIA2BBHAAL4gBY/wUoHu391h4dSwAAAABJRU5ErkJggg==">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Spread Bets</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+:root {
+  --bg: #F4ECD9;
+  --card: #FAF7F0;
+  --ink: #1F1E1B;
+  --ink-soft: #4A4A47;
+  --mute: #8B8B7D;
+  --hairline: #D8CFB6;
+  --hairline-soft: #E8DFC9;
+  --coral: #CC785C;
+  --coral-soft: #E5A38C;
+  --win: #3F7D58;
+  --loss: #B5524C;
+  --shadow: 0 1px 2px rgba(31, 30, 27, 0.04);
+  --shadow-lg: 0 8px 32px rgba(31, 30, 27, 0.12);
+  --serif: ui-serif, "New York", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, sans-serif;
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: contain;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bottom);
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 8px 20px 120px;
+}
+
+/* ── HEADER ── */
+header {
+  padding: 24px 0 16px;
+}
+h1 {
+  font-family: var(--serif);
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--mute);
+}
+
+/* ── HERO P&L ── */
+.hero {
+  margin: 28px 0 8px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--hairline);
+}
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 8px;
+}
+.hero-value {
+  font-family: var(--serif);
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-feature-settings: "tnum" 1;
+}
+.hero-value.win { color: var(--win); }
+.hero-value.loss { color: var(--loss); }
+.hero-caption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-top: 10px;
+}
+
+/* ── STATS ROW ── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--hairline);
+}
+.stat .label {
+  margin-bottom: 6px;
+  color: var(--mute);
+}
+.stat-value {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.1;
+  font-feature-settings: "tnum" 1;
+}
+
+/* ── SECTION ── */
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 8px 0 16px;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--ink);
+}
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--hairline-soft);
+  padding: 3px;
+  border-radius: 9px;
+  margin-bottom: 16px;
+}
+.tab {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--mute);
+  padding: 8px 4px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-feature-settings: "tnum" 1;
+}
+.tab.active {
+  background: var(--bg);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+/* ── BET CARDS ── */
+.bet-list { display: flex; flex-direction: column; gap: 10px; }
+
+.bet-card {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  padding: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.bet-card:active { transform: scale(0.985); border-color: var(--coral-soft); }
+
+.bet-card .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.bet-card .market {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.badge.long { background: rgba(63, 125, 88, 0.12); color: var(--win); }
+.badge.short { background: rgba(181, 82, 76, 0.12); color: var(--loss); }
+.badge .arrow { font-size: 9px; }
+
+.bet-meta {
+  font-size: 12px;
+  color: var(--mute);
+  margin-top: 2px;
+  font-feature-settings: "tnum" 1;
+}
+
+.bet-pnl {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  text-align: right;
+  line-height: 1.1;
+  font-feature-settings: "tnum" 1;
+  white-space: nowrap;
+}
+.bet-pnl.win { color: var(--win); }
+.bet-pnl.loss { color: var(--loss); }
+.bet-pnl.neutral { color: var(--mute); }
+.bet-pnl-sub {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-top: 2px;
+}
+
+.bet-card .details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--hairline);
+  font-size: 13px;
+}
+.bet-card .detail-label {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 2px;
+}
+.bet-card .detail-value {
+  color: var(--ink);
+  font-feature-settings: "tnum" 1;
+}
+
+.bet-card .notes {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--hairline);
+}
+.bet-card .notes .close-note {
+  display: block;
+  margin-top: 4px;
+  color: var(--mute);
+}
+
+/* ── EMPTY STATE ── */
+.empty {
+  text-align: center;
+  padding: 48px 24px;
+  border: 1px dashed var(--hairline);
+  border-radius: 14px;
+  margin-top: 8px;
+}
+.empty-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.empty-sub {
+  font-size: 13px;
+  color: var(--mute);
+}
+
+/* ── FAB (Add button) ── */
+.fab {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  border: 0;
+  box-shadow: var(--shadow-lg);
+  font-size: 30px;
+  font-weight: 300;
+  cursor: pointer;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+.fab:active { transform: scale(0.94); }
+
+/* ── BOTTOM SHEET / MODAL ── */
+.sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(31, 30, 27, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.sheet-overlay.open { opacity: 1; pointer-events: auto; }
+
+.sheet {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  background: var(--bg);
+  border-radius: 20px 20px 0 0;
+  z-index: 101;
+  transform: translateY(100%);
+  transition: transform 0.28s cubic-bezier(0.32, 0.72, 0.3, 1);
+  max-height: 92vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  box-shadow: 0 -1px 0 var(--hairline);
+}
+.sheet.open { transform: translateY(0); }
+.sheet-handle {
+  width: 40px;
+  height: 5px;
+  background: var(--hairline);
+  border-radius: 999px;
+  margin: 10px auto 4px;
+}
+
+.sheet-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px 16px;
+  border-bottom: 1px solid var(--hairline);
+}
+.sheet-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+}
+.sheet-close {
+  border: 0;
+  background: transparent;
+  font-size: 22px;
+  color: var(--mute);
+  cursor: pointer;
+  padding: 4px 8px;
+  font-family: var(--sans);
+}
+
+.sheet-body { padding: 20px; }
+
+/* ── FORM ── */
+.field { margin-bottom: 16px; }
+.field-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 6px;
+}
+.field-hint { text-transform: none; letter-spacing: 0; opacity: 0.7; }
+
+.input, .textarea {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 14px 14px;
+  font-size: 16px;
+  font-family: var(--sans);
+  color: var(--ink);
+  font-feature-settings: "tnum" 1;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.input:focus, .textarea:focus { border-color: var(--coral); }
+.textarea { resize: none; min-height: 80px; font-family: var(--serif); font-style: italic; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* Direction toggle */
+.direction-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.direction-btn {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  padding: 14px;
+  border-radius: 10px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--mute);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+.direction-btn.active.long {
+  background: rgba(63, 125, 88, 0.12);
+  border-color: var(--win);
+  color: var(--win);
+}
+.direction-btn.active.short {
+  background: rgba(181, 82, 76, 0.12);
+  border-color: var(--loss);
+  color: var(--loss);
+}
+
+.preview {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+.preview-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.preview-value {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-feature-settings: "tnum" 1;
+}
+.preview-value.win { color: var(--win); }
+.preview-value.loss { color: var(--loss); }
+
+.error {
+  background: rgba(181, 82, 76, 0.1);
+  color: var(--loss);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 12px;
+  display: none;
+}
+.error.show { display: block; }
+
+/* Buttons */
+.btn-row { display: flex; gap: 10px; margin-top: 8px; }
+.btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 0;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.btn:active { transform: scale(0.98); }
+.btn-primary { background: var(--ink); color: var(--bg); flex: 2; }
+.btn-secondary { background: var(--hairline-soft); color: var(--ink-soft); }
+.btn-danger { background: rgba(181, 82, 76, 0.15); color: var(--loss); }
+
+/* Action sheet for an existing bet */
+.action-list { display: flex; flex-direction: column; gap: 8px; }
+.action-btn {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  padding: 16px;
+  border-radius: 10px;
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.15s ease;
+}
+.action-btn.danger { color: var(--loss); }
+.action-btn:active { background: var(--hairline-soft); }
+.action-btn .ic { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.7; }
+
+.bet-summary {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 16px;
+  font-feature-settings: "tnum" 1;
+}
+.bet-summary-market {
+  font-family: var(--serif);
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.bet-summary-meta {
+  font-size: 12px;
+  color: var(--mute);
+}
+
+/* ── FOOTER ── */
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  padding: 16px 0;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.footer a {
+  color: var(--coral);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Disable iOS bounce / select on UI */
+.app, .sheet-head, .tabs, .fab, .bet-card .top { -webkit-user-select: none; user-select: none; }
+input, textarea, .notes { -webkit-user-select: text; user-select: text; }
+
+/* iOS specific */
+input[type="date"] { min-height: 48px; }
+input[type="number"] { -moz-appearance: textfield; }
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none; margin: 0;
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <header>
+    <h1>Spread Bets</h1>
+    <div class="subtitle">A record of every position taken.</div>
+  </header>
+
+  <div class="hero">
+    <div class="label">Total P&amp;L</div>
+    <div id="hero-pnl" class="hero-value">£0.00</div>
+    <div id="hero-caption" class="hero-caption">No bets logged yet.</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="label">Win Rate</div>
+      <div id="stat-winrate" class="stat-value">—</div>
+    </div>
+    <div class="stat">
+      <div class="label">Open</div>
+      <div id="stat-open" class="stat-value">0</div>
+    </div>
+    <div class="stat">
+      <div class="label">Closed</div>
+      <div id="stat-closed" class="stat-value">0</div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <div class="section-title">Positions</div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="open">Open</button>
+    <button class="tab" data-tab="closed">Closed</button>
+    <button class="tab" data-tab="all">All</button>
+  </div>
+
+  <div id="bet-list" class="bet-list"></div>
+
+  <div class="footer">
+    <span id="footer-count">0 entries</span> &nbsp;·&nbsp; <a id="export-btn">Export CSV</a>
+  </div>
+</div>
+
+<button class="fab" id="add-btn" aria-label="Add bet">+</button>
+
+<!-- Sheets -->
+<div class="sheet-overlay" id="overlay"></div>
+
+<!-- ADD/EDIT SHEET -->
+<div class="sheet" id="sheet-form">
+  <div class="sheet-handle"></div>
+  <div class="sheet-head">
+    <div class="sheet-title" id="form-title">New Position</div>
+    <button class="sheet-close" data-close>Done</button>
+  </div>
+  <div class="sheet-body">
+    <div class="error" id="form-error"></div>
+    <div class="field">
+      <div class="field-label"><span>Market</span><span class="field-hint">e.g. FTSE 100, Tesla, Brent oil</span></div>
+      <input class="input" id="f-market" type="text" autocomplete="off" placeholder="Brent crude">
+    </div>
+    <div class="field">
+      <div class="field-label"><span>Direction</span></div>
+      <div class="direction-toggle">
+        <button type="button" class="direction-btn active long" data-dir="long">↗ Long</button>
+        <button type="button" class="direction-btn short" data-dir="short">↘ Short</button>
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <div class="field-label"><span>Stake / pt</span><span class="field-hint">£</span></div>
+        <input class="input" id="f-stake" type="number" inputmode="decimal" step="0.01" placeholder="2.00">
+      </div>
+      <div class="field">
+        <div class="field-label"><span>Open price</span></div>
+        <input class="input" id="f-open" type="number" inputmode="decimal" step="0.0001" placeholder="7800">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <div class="field-label"><span>Stop loss</span><span class="field-hint">optional</span></div>
+        <input class="input" id="f-stop" type="number" inputmode="decimal" step="0.0001">
+      </div>
+      <div class="field">
+        <div class="field-label"><span>Take profit</span><span class="field-hint">optional</span></div>
+        <input class="input" id="f-target" type="number" inputmode="decimal" step="0.0001">
+      </div>
+    </div>
+    <div class="field">
+      <div class="field-label"><span>Date opened</span></div>
+      <input class="input" id="f-date" type="date">
+    </div>
+    <div class="field">
+      <div class="field-label"><span>Notes</span><span class="field-hint">thesis, setup, mood…</span></div>
+      <textarea class="textarea" id="f-notes" placeholder="Bullish on UK equities ahead of CPI…"></textarea>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" data-close>Cancel</button>
+      <button class="btn btn-primary" id="form-save">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ACTIONS SHEET -->
+<div class="sheet" id="sheet-actions">
+  <div class="sheet-handle"></div>
+  <div class="sheet-head">
+    <div class="sheet-title">Actions</div>
+    <button class="sheet-close" data-close>Done</button>
+  </div>
+  <div class="sheet-body">
+    <div class="bet-summary" id="actions-summary"></div>
+    <div class="action-list">
+      <button class="action-btn" id="action-close">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        Close position
+      </button>
+      <button class="action-btn" id="action-edit">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Edit details
+      </button>
+      <button class="action-btn" id="action-reopen" style="display:none;">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+        Re-open
+      </button>
+      <button class="action-btn danger" id="action-delete">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/></svg>
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- CLOSE SHEET -->
+<div class="sheet" id="sheet-close">
+  <div class="sheet-handle"></div>
+  <div class="sheet-head">
+    <div class="sheet-title">Close Position</div>
+    <button class="sheet-close" data-close>Done</button>
+  </div>
+  <div class="sheet-body">
+    <div class="bet-summary" id="close-summary"></div>
+    <div class="error" id="close-error"></div>
+    <div class="field">
+      <div class="field-label"><span>Close price</span></div>
+      <input class="input" id="c-price" type="number" inputmode="decimal" step="0.0001" placeholder="7855">
+    </div>
+    <div class="field">
+      <div class="field-label"><span>Close date</span></div>
+      <input class="input" id="c-date" type="date">
+    </div>
+    <div class="field">
+      <div class="field-label"><span>Close notes</span><span class="field-hint">what happened?</span></div>
+      <textarea class="textarea" id="c-notes" placeholder="Stopped out on CPI surprise…"></textarea>
+    </div>
+    <div class="preview" id="close-preview" style="display:none;">
+      <span class="preview-label">P&amp;L Preview</span>
+      <span id="close-preview-val" class="preview-value">£0.00</span>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-secondary" data-close>Cancel</button>
+      <button class="btn btn-primary" id="close-confirm">Confirm Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- DELETE CONFIRM SHEET -->
+<div class="sheet" id="sheet-delete">
+  <div class="sheet-handle"></div>
+  <div class="sheet-head">
+    <div class="sheet-title">Delete entry?</div>
+    <button class="sheet-close" data-close>Done</button>
+  </div>
+  <div class="sheet-body">
+    <p style="font-family: var(--serif); font-size: 16px; color: var(--ink-soft); margin-bottom: 20px;">
+      This will permanently remove <em id="delete-market"></em> from your logbook. This cannot be undone.
+    </p>
+    <div class="btn-row">
+      <button class="btn btn-secondary" data-close>Keep</button>
+      <button class="btn btn-danger" id="delete-confirm">Delete</button>
+    </div>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+const STORE_KEY = 'spreadbets:v1';
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => document.querySelectorAll(s);
+
+// ── State ─────────────────────────────────────────
+let bets = [];
+let activeTab = 'open';
+let currentBetId = null;
+let editingBetId = null;
+let formDirection = 'long';
+
+// ── Persistence ──────────────────────────────────
+function loadBets() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    bets = raw ? JSON.parse(raw) : [];
+  } catch (e) { bets = []; }
+}
+function saveBets() {
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(bets)); }
+  catch (e) { console.error('save failed', e); }
+}
+
+// ── Helpers ──────────────────────────────────────
+const uid = () => 'b_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+const todayISO = () => new Date().toISOString().slice(0, 10);
+
+function fmtMoney(n, opts = {}) {
+  if (n == null || isNaN(n)) return '—';
+  const abs = Math.abs(n);
+  const str = abs.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const sign = n < 0 ? '−' : '';
+  return sign + '£' + str;
+}
+function fmtPrice(n) {
+  if (n == null || n === '' || isNaN(n)) return '—';
+  return Number(n).toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 4 });
+}
+function fmtDate(iso) {
+  if (!iso) return '—';
+  const d = new Date(iso);
+  if (isNaN(d)) return '—';
+  return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: '2-digit' });
+}
+function calcPnL(b) {
+  if (b.status !== 'closed' || b.closePrice == null) return null;
+  const diff = b.direction === 'long' ? b.closePrice - b.openPrice : b.openPrice - b.closePrice;
+  return diff * b.stakePerPoint;
+}
+
+// ── Render ───────────────────────────────────────
+function render() {
+  const closed = bets.filter(b => b.status === 'closed');
+  const open = bets.filter(b => b.status === 'open');
+  const totalPnL = closed.reduce((s, b) => s + (calcPnL(b) || 0), 0);
+  const wins = closed.filter(b => calcPnL(b) > 0).length;
+  const losses = closed.filter(b => calcPnL(b) < 0).length;
+
+  // Hero
+  const hero = $('#hero-pnl');
+  hero.textContent = fmtMoney(totalPnL);
+  hero.className = 'hero-value ' + (totalPnL > 0 ? 'win' : totalPnL < 0 ? 'loss' : '');
+  $('#hero-caption').textContent = bets.length === 0
+    ? 'No bets logged yet.'
+    : `${bets.length} ${bets.length === 1 ? 'bet' : 'bets'} · ${closed.length} settled`;
+
+  // Stats
+  $('#stat-winrate').textContent = closed.length ? Math.round((wins / closed.length) * 100) + '%' : '—';
+  $('#stat-open').textContent = open.length;
+  $('#stat-closed').textContent = closed.length;
+
+  // Tabs
+  $$('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === activeTab));
+
+  // Filter
+  const filtered = activeTab === 'open' ? open : activeTab === 'closed' ? closed : bets;
+  filtered.sort((a, b) => (b.openDate || '').localeCompare(a.openDate || ''));
+
+  // List
+  const list = $('#bet-list');
+  list.innerHTML = '';
+  if (filtered.length === 0) {
+    const empty = document.createElement('div');
+    empty.className = 'empty';
+    const msgs = {
+      open: ['No open positions.', 'Tap + to log a new bet.'],
+      closed: ['Nothing closed yet.', 'Settled bets and P&L will live here.'],
+      all: ['Your logbook is empty.', 'Tap + to log your first bet.'],
+    }[activeTab];
+    empty.innerHTML = `<div class="empty-title">${msgs[0]}</div><div class="empty-sub">${msgs[1]}</div>`;
+    list.appendChild(empty);
+  } else {
+    filtered.forEach(b => list.appendChild(buildCard(b)));
+  }
+
+  // Footer
+  $('#footer-count').textContent = `${bets.length} ${bets.length === 1 ? 'entry' : 'entries'}`;
+}
+
+function buildCard(b) {
+  const pnl = calcPnL(b);
+  const pnlClass = pnl > 0 ? 'win' : pnl < 0 ? 'loss' : 'neutral';
+  const card = document.createElement('div');
+  card.className = 'bet-card';
+  card.dataset.id = b.id;
+
+  card.innerHTML = `
+    <div class="top">
+      <div style="flex:1; min-width:0;">
+        <div class="market">${escapeHtml(b.market)}</div>
+        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+          <span class="badge ${b.direction}"><span class="arrow">${b.direction === 'long' ? '↗' : '↘'}</span> ${b.direction}</span>
+          <span class="bet-meta">${fmtDate(b.openDate)}${b.closeDate ? ' → ' + fmtDate(b.closeDate) : ''}</span>
+        </div>
+      </div>
+      ${b.status === 'closed' && pnl !== null ? `
+        <div>
+          <div class="bet-pnl ${pnlClass}">${fmtMoney(pnl)}</div>
+          <div class="bet-pnl-sub">${pnl > 0 ? 'Win' : pnl < 0 ? 'Loss' : 'Flat'}</div>
+        </div>
+      ` : `
+        <div>
+          <div class="bet-pnl-sub" style="text-align:right;">Open</div>
+        </div>
+      `}
+    </div>
+    <div class="details">
+      <div><div class="detail-label">Stake</div><div class="detail-value">£${b.stakePerPoint}</div></div>
+      <div><div class="detail-label">Open</div><div class="detail-value">${fmtPrice(b.openPrice)}</div></div>
+      <div><div class="detail-label">${b.status === 'closed' ? 'Close' : 'Stop'}</div><div class="detail-value">${b.status === 'closed' ? fmtPrice(b.closePrice) : fmtPrice(b.stopLoss)}</div></div>
+      <div><div class="detail-label">${b.status === 'closed' ? 'Pts' : 'Target'}</div><div class="detail-value">${b.status === 'closed' && pnl !== null ? (pnl / b.stakePerPoint).toFixed(1) : fmtPrice(b.takeProfit)}</div></div>
+    </div>
+    ${(b.notes || b.closeNotes) ? `
+      <div class="notes">
+        ${b.notes ? escapeHtml(b.notes) : ''}
+        ${b.closeNotes ? `<span class="close-note">↳ ${escapeHtml(b.closeNotes)}</span>` : ''}
+      </div>
+    ` : ''}
+  `;
+
+  card.addEventListener('click', () => openActionsSheet(b.id));
+  return card;
+}
+
+function escapeHtml(s) {
+  if (!s) return '';
+  return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+}
+
+// ── Sheet helpers ─────────────────────────────────
+function openSheet(id) {
+  $('#overlay').classList.add('open');
+  $('#' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeAllSheets() {
+  $('#overlay').classList.remove('open');
+  $$('.sheet').forEach(s => s.classList.remove('open'));
+  document.body.style.overflow = '';
+  // Clear errors
+  $$('.error').forEach(e => e.classList.remove('show'));
+}
+
+// ── Add / Edit form ───────────────────────────────
+function openFormSheet(betId = null) {
+  editingBetId = betId;
+  const isEdit = betId !== null;
+  $('#form-title').textContent = isEdit ? 'Edit Position' : 'New Position';
+  $('#form-save').textContent = isEdit ? 'Save Changes' : 'Save';
+
+  if (isEdit) {
+    const b = bets.find(x => x.id === betId);
+    $('#f-market').value = b.market || '';
+    setFormDirection(b.direction);
+    $('#f-stake').value = b.stakePerPoint || '';
+    $('#f-open').value = b.openPrice || '';
+    $('#f-stop').value = b.stopLoss ?? '';
+    $('#f-target').value = b.takeProfit ?? '';
+    $('#f-date').value = b.openDate || todayISO();
+    $('#f-notes').value = b.notes || '';
+  } else {
+    $('#f-market').value = '';
+    setFormDirection('long');
+    $('#f-stake').value = '';
+    $('#f-open').value = '';
+    $('#f-stop').value = '';
+    $('#f-target').value = '';
+    $('#f-date').value = todayISO();
+    $('#f-notes').value = '';
+  }
+  openSheet('sheet-form');
+}
+
+function setFormDirection(dir) {
+  formDirection = dir;
+  $$('.direction-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.dir === dir);
+  });
+}
+
+$$('.direction-btn').forEach(b => {
+  b.addEventListener('click', () => setFormDirection(b.dataset.dir));
+});
+
+$('#form-save').addEventListener('click', () => {
+  const market = $('#f-market').value.trim();
+  const stake = parseFloat($('#f-stake').value);
+  const open = parseFloat($('#f-open').value);
+  const stop = $('#f-stop').value ? parseFloat($('#f-stop').value) : null;
+  const target = $('#f-target').value ? parseFloat($('#f-target').value) : null;
+  const date = $('#f-date').value || todayISO();
+  const notes = $('#f-notes').value.trim();
+
+  const err = $('#form-error');
+  if (!market) { err.textContent = 'Market is required'; err.classList.add('show'); return; }
+  if (!stake || stake <= 0) { err.textContent = 'Stake must be a positive number'; err.classList.add('show'); return; }
+  if (isNaN(open)) { err.textContent = 'Open price is required'; err.classList.add('show'); return; }
+  err.classList.remove('show');
+
+  if (editingBetId) {
+    const b = bets.find(x => x.id === editingBetId);
+    Object.assign(b, { market, direction: formDirection, stakePerPoint: stake, openPrice: open, stopLoss: stop, takeProfit: target, openDate: date, notes });
+  } else {
+    bets.unshift({
+      id: uid(), market, direction: formDirection, stakePerPoint: stake,
+      openPrice: open, stopLoss: stop, takeProfit: target, openDate: date,
+      notes, status: 'open', closePrice: null, closeDate: null, closeNotes: '',
+    });
+  }
+  saveBets();
+  render();
+  closeAllSheets();
+});
+
+// ── Actions sheet ─────────────────────────────────
+function openActionsSheet(betId) {
+  currentBetId = betId;
+  const b = bets.find(x => x.id === betId);
+  if (!b) return;
+  const pnl = calcPnL(b);
+  $('#actions-summary').innerHTML = `
+    <div class="bet-summary-market">${escapeHtml(b.market)}</div>
+    <div class="bet-summary-meta">${b.direction.toUpperCase()} · £${b.stakePerPoint}/pt · ${b.status === 'closed' && pnl !== null ? fmtMoney(pnl) : 'Open'}</div>
+  `;
+  $('#action-close').style.display = b.status === 'open' ? 'flex' : 'none';
+  $('#action-reopen').style.display = b.status === 'closed' ? 'flex' : 'none';
+  openSheet('sheet-actions');
+}
+
+$('#action-close').addEventListener('click', () => {
+  closeAllSheets();
+  setTimeout(() => openCloseSheet(currentBetId), 280);
+});
+$('#action-edit').addEventListener('click', () => {
+  closeAllSheets();
+  setTimeout(() => openFormSheet(currentBetId), 280);
+});
+$('#action-reopen').addEventListener('click', () => {
+  const b = bets.find(x => x.id === currentBetId);
+  if (b) {
+    b.status = 'open'; b.closePrice = null; b.closeDate = null; b.closeNotes = '';
+    saveBets(); render();
+  }
+  closeAllSheets();
+});
+$('#action-delete').addEventListener('click', () => {
+  closeAllSheets();
+  setTimeout(() => openDeleteSheet(currentBetId), 280);
+});
+
+// ── Close sheet ───────────────────────────────────
+function openCloseSheet(betId) {
+  currentBetId = betId;
+  const b = bets.find(x => x.id === betId);
+  if (!b) return;
+  $('#close-summary').innerHTML = `
+    <div class="bet-summary-market">${escapeHtml(b.market)}</div>
+    <div class="bet-summary-meta">${b.direction.toUpperCase()} · £${b.stakePerPoint}/pt · opened @ ${fmtPrice(b.openPrice)}</div>
+  `;
+  $('#c-price').value = '';
+  $('#c-date').value = todayISO();
+  $('#c-notes').value = '';
+  $('#close-preview').style.display = 'none';
+  openSheet('sheet-close');
+}
+
+$('#c-price').addEventListener('input', () => {
+  const b = bets.find(x => x.id === currentBetId);
+  if (!b) return;
+  const cp = parseFloat($('#c-price').value);
+  if (isNaN(cp)) { $('#close-preview').style.display = 'none'; return; }
+  const pnl = (b.direction === 'long' ? cp - b.openPrice : b.openPrice - cp) * b.stakePerPoint;
+  $('#close-preview').style.display = 'flex';
+  const v = $('#close-preview-val');
+  v.textContent = fmtMoney(pnl);
+  v.className = 'preview-value ' + (pnl > 0 ? 'win' : pnl < 0 ? 'loss' : '');
+});
+
+$('#close-confirm').addEventListener('click', () => {
+  const b = bets.find(x => x.id === currentBetId);
+  if (!b) return;
+  const cp = parseFloat($('#c-price').value);
+  const err = $('#close-error');
+  if (isNaN(cp)) { err.textContent = 'Close price is required'; err.classList.add('show'); return; }
+  err.classList.remove('show');
+  b.closePrice = cp;
+  b.closeDate = $('#c-date').value || todayISO();
+  b.closeNotes = $('#c-notes').value.trim();
+  b.status = 'closed';
+  saveBets();
+  render();
+  closeAllSheets();
+});
+
+// ── Delete sheet ──────────────────────────────────
+function openDeleteSheet(betId) {
+  currentBetId = betId;
+  const b = bets.find(x => x.id === betId);
+  if (!b) return;
+  $('#delete-market').textContent = b.market;
+  openSheet('sheet-delete');
+}
+
+$('#delete-confirm').addEventListener('click', () => {
+  bets = bets.filter(b => b.id !== currentBetId);
+  saveBets();
+  render();
+  closeAllSheets();
+});
+
+// ── Tabs ──────────────────────────────────────────
+$$('.tab').forEach(t => {
+  t.addEventListener('click', () => {
+    activeTab = t.dataset.tab;
+    render();
+  });
+});
+
+// ── FAB / overlay / close buttons ─────────────────
+$('#add-btn').addEventListener('click', () => openFormSheet());
+$('#overlay').addEventListener('click', closeAllSheets);
+document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', closeAllSheets));
+
+// ── Export CSV ────────────────────────────────────
+$('#export-btn').addEventListener('click', () => {
+  if (bets.length === 0) { alert('Nothing to export yet.'); return; }
+  const header = ['Date Opened', 'Market', 'Direction', 'Stake/pt (£)', 'Open Price', 'Stop Loss', 'Take Profit', 'Close Date', 'Close Price', 'P&L (£)', 'Status', 'Notes'];
+  const rows = bets.map(b => [
+    b.openDate, b.market, b.direction, b.stakePerPoint, b.openPrice,
+    b.stopLoss ?? '', b.takeProfit ?? '', b.closeDate ?? '', b.closePrice ?? '',
+    calcPnL(b) ?? '', b.status, (b.notes || '').replace(/\n/g, ' '),
+  ]);
+  const csv = [header, ...rows].map(r =>
+    r.map(c => typeof c === 'string' && (c.includes(',') || c.includes('"'))
+      ? `"${c.replace(/"/g, '""')}"` : c).join(',')
+  ).join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `spread-bets-${todayISO()}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+// Prevent accidental zoom from double-tap on iOS
+let lastTap = 0;
+document.addEventListener('touchend', (e) => {
+  const now = Date.now();
+  if (now - lastTap < 300) e.preventDefault();
+  lastTap = now;
+}, { passive: false });
+
+// ── Init ──────────────────────────────────────────
+loadBets();
+render();
+</script>
+</body>
+</html>
